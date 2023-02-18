@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingHorizontal="18dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sf_pro_900"
+        android:text="WELCOME"
+        android:textAllCaps="true"
+        android:textColor="@color/my_blue"
+        android:textSize="32sp" />
+
+    <TextView
+        android:id="@+id/nameWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/sf_pro_900"
+        android:text="Ibrokhim Mirzaev"
+        android:textColor="@color/white"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/passwordWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sf_pro_900"
+        android:text="Your password"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
+</LinearLayout>

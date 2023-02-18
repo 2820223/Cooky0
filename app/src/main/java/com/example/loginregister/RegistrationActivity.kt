@@ -1,25 +1,18 @@
 package com.example.loginregister
 
-import android.annotation.SuppressLint
 import android.content.Intent
 import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
 import android.widget.Toast
-import com.google.android.material.textfield.TextInputEditText
 import com.google.firebase.crashlytics.buildtools.reloc.com.google.common.reflect.TypeToken
 import com.google.gson.Gson
+import kotlinx.android.synthetic.main.activity_reg.*
 
 class RegistrationActivity : AppCompatActivity() {
 
-    private lateinit var reg: Button
-    lateinit var name: TextInputEditText
-    lateinit var password: TextInputEditText
-    private lateinit var userList: MutableList<User>
+    private var userList = mutableListOf<User>()
 
-
-    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_reg)
@@ -29,47 +22,46 @@ class RegistrationActivity : AppCompatActivity() {
         val gson = Gson()
         val convert = object : TypeToken<List<User>>() {}.type
 
-        initUI()
+        val intent = Intent(this, LoginActivity::class.java)
 
-        reg.setOnClickListener {
-            validate()
-            val users = shared.getString("users", "")
+        signInReg.setOnClickListener {
+            startActivity(intent)
+        }
+
+        signUpReg.setOnClickListener {
+            var users = shared.getString("users", "")
             if (users == "") {
                 userList = mutableListOf()
             } else {
                 userList = gson.fromJson(users, convert)
             }
 
-            userList.add(User(name, password))
+            if (validate()) {
+                userList.add(User(nameInputReg.text.toString(), passwordInputReg.text.toString()))
 
-            val str = gson.toJson(userList)
-            edit.putString("users", str).apply()
+                val str = gson.toJson(userList)
+                edit.putString("users", str).apply()
 
+                Toast.makeText(this,"Successfully registered",Toast.LENGTH_SHORT).show()
 
-//            val intent = Intent(this, LoginActivity::class.java)
-            startActivity(intent)
+                startActivity(intent)
+            }
         }
 
     }
 
-    private fun initUI() {
-        reg = findViewById(R.id.signUp)
-        name = findViewById(R.id.nameInput)
-        password = findViewById(R.id.passwordInput)
-    }
-
-    private fun validate() {
-        if (name.equals("") || password.equals("")) {
+    private fun validate(): Boolean {
+        if (nameInputReg.text.toString().isEmpty() || passwordInputReg.text.toString().isEmpty()) {
             Toast.makeText(this, "Fill the form fully", Toast.LENGTH_SHORT).show()
+            return false
         }
-//        for (i in userList.indices) {
-//            if (username.toString().equals(userList[i].username)) {
-//                Toast.makeText(
-//                    this,
-//                    "User with this username already registered",
-//                    Toast.LENGTH_SHORT
-//                ).show()
-//            }
-//        }
+        for (i in userList.indices) {
+            if (nameInputReg.text.toString() == userList[i].name) {
+                Toast.makeText(this, "User with this username already registered", Toast.LENGTH_SHORT).show()
+                return false
+            }
+        }
+
+        return true
     }
 }
