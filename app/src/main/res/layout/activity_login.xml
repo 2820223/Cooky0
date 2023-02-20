@@ -16,7 +16,7 @@
         android:fontFamily="@font/sf_pro_900"
         android:text="Login"
         android:textAllCaps="true"
-        android:textColor="@color/my_blue"
+        android:textColor="@color/yellow"
         android:textSize="32sp" />
 
     <com.google.android.material.textfield.TextInputLayout
@@ -26,7 +26,7 @@
         android:layout_marginTop="20dp"
         android:hint="Name"
         android:textColorHint="@color/text_color"
-        app:boxStrokeColor="@color/my_blue">
+        app:boxStrokeColor="@color/yellow">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/nameInputLog"
@@ -46,7 +46,7 @@
         android:layout_marginTop="20dp"
         android:hint="Password"
         android:textColorHint="@color/text_color"
-        app:boxStrokeColor="@color/my_blue"
+        app:boxStrokeColor="@color/yellow"
         app:passwordToggleEnabled="true"
         app:passwordToggleTint="#FF48484A">
 
@@ -61,21 +61,21 @@
             android:textSize="15sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:fontFamily="@font/sf_pro_400"
-        android:text="Forgot your password?"
-        android:textColor="@color/text_color"
-        android:textSize="13sp" />
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:fontFamily="@font/sf_pro_400"-->
+<!--        android:text="Forgot your password?"-->
+<!--        android:textColor="@color/text_color"-->
+<!--        android:textSize="13sp" />-->
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/signInLog"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginTop="32dp"
-        android:backgroundTint="@color/my_blue"
+        android:backgroundTint="@color/yellow"
         android:fontFamily="@font/sf_pro_600"
         android:insetTop="0dp"
         android:insetBottom="0dp"
@@ -85,14 +85,14 @@
         android:textSize="16sp"
         app:cornerRadius="0dp" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="82dp"
-        android:fontFamily="@font/sf_pro_400"
-        android:text="Other sign in options"
-        android:textColor="@color/text_color"
-        android:textSize="13sp" />
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="82dp"-->
+<!--        android:fontFamily="@font/sf_pro_400"-->
+<!--        android:text="Other sign in options"-->
+<!--        android:textColor="@color/text_color"-->
+<!--        android:textSize="13sp" />-->
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -100,32 +100,32 @@
         android:layout_marginTop="12dp"
         android:orientation="horizontal">
 
-        <ImageView
-            android:layout_width="36dp"
-            android:layout_height="36dp"
-            android:layout_marginEnd="12dp"
-            android:background="@drawable/circle"
-            android:padding="8dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/google" />
+<!--        <ImageView-->
+<!--            android:layout_width="36dp"-->
+<!--            android:layout_height="36dp"-->
+<!--            android:layout_marginEnd="12dp"-->
+<!--            android:background="@drawable/circle"-->
+<!--            android:padding="8dp"-->
+<!--            android:scaleType="centerCrop"-->
+<!--            android:src="@drawable/google" />-->
 
-        <ImageView
-            android:layout_width="36dp"
-            android:layout_height="36dp"
-            android:layout_marginEnd="12dp"
-            android:background="@drawable/circle"
-            android:padding="8dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/facebook" />
+<!--        <ImageView-->
+<!--            android:layout_width="36dp"-->
+<!--            android:layout_height="36dp"-->
+<!--            android:layout_marginEnd="12dp"-->
+<!--            android:background="@drawable/circle"-->
+<!--            android:padding="8dp"-->
+<!--            android:scaleType="centerCrop"-->
+<!--            android:src="@drawable/facebook" />-->
 
-        <ImageView
-            android:layout_width="36dp"
-            android:layout_height="36dp"
-            android:layout_marginEnd="12dp"
-            android:background="@drawable/circle"
-            android:padding="10dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/olma" />
+<!--        <ImageView-->
+<!--            android:layout_width="36dp"-->
+<!--            android:layout_height="36dp"-->
+<!--            android:layout_marginEnd="12dp"-->
+<!--            android:background="@drawable/circle"-->
+<!--            android:padding="10dp"-->
+<!--            android:scaleType="centerCrop"-->
+<!--            android:src="@drawable/olma" />-->
     </LinearLayout>
 
     <TextView

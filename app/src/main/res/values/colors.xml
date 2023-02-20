@@ -24,4 +24,8 @@
     <color name="text_color">#99EBEBF5</color>
     <color name="eye_color">#99EBEBF5</color>
     <color name="transparent">#00FFFFFF</color>
+    <color name="color">#C45A5959</color>
+    <color name="edit_text_background">#E2CAC2C1</color>
+    <color name="yellow">#FCB702</color>
+    <color name="green">#00FE00</color>
 </resources>

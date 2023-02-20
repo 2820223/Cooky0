@@ -3,8 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/black_"
-    android:gravity="center"
     android:orientation="vertical"
     android:paddingHorizontal="18dp"
     tools:context=".MainActivity">
@@ -14,26 +14,62 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/sf_pro_900"
         android:text="WELCOME"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="110dp"
         android:textAllCaps="true"
-        android:textColor="@color/my_blue"
+        android:textColor="@color/yellow"
         android:textSize="32sp" />
 
     <TextView
         android:id="@+id/nameWelcome"
         android:layout_width="wrap_content"
+
+        android:layout_marginStart="130dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:fontFamily="@font/sf_pro_900"
-        android:text="Ibrokhim Mirzaev"
+        android:text=""
         android:textColor="@color/white"
         android:textSize="25sp" />
 
+<!--    <TextView-->
+<!--        android:id="@+id/passwordWelcome"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:fontFamily="@font/sf_pro_900"-->
+<!--        android:text="Your password"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:textSize="15sp" />-->
+    <com.google.android.material.button.MaterialButton
+android:id="@+id/set_course"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="120dp"
+        app:cornerRadius="20dp"
+        android:backgroundTint="@color/yellow"
+        android:text="Set your course"
+        />
+
     <TextView
-        android:id="@+id/passwordWelcome"
+        android:id="@+id/whatToDO"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="-120dp"
         android:fontFamily="@font/sf_pro_900"
-        android:text="Your password"
+        android:text="What do you want: "
         android:textColor="@color/white"
-        android:textSize="15sp" />
+        android:textSize="25sp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="120dp"
+        app:cornerRadius="20dp"
+        android:backgroundTint="@color/yellow"
+        android:text="Find new meals"
+        />
+
 </LinearLayout>
